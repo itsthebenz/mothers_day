@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="birthdayCard">
+        <div class="cardFront">
+            <h1 class="happy">母亲节快乐！ <br>
+                <p>
+                    <h2 class="happy">MAMA I WILL ALWAYS BE YOUR <del>LITTLE GIRL</del> FINANCIAL BURDEN 😄😄😄</h2>
+                </p>
+            </h1>
+            <div class="balloons">
+                <div class="balloon-1"></div>
+                <div class="balloon-2"></div>
+                <div class="balloon-3"></div>
+                <div class="balloon-4"></div>
+            </div>
+        </div>
+    
+        <div class="cardInside">
+            <img class="img" src="IMG_0055.jpg" alt="img">
+
+            <h3 class="back">HAPPY LAYCHOO YEO DAY </h3>
+            <p> 妈妈,
+                <p>
+                "在这个母亲节，我想对您说声谢谢.感恩您无尽的爱和支持。您的关爱让我变得更坚强，更有勇气。
+                谢谢您一直陪伴我。 在这个特别的日子里，祝您母亲节快乐！愿您健康快乐，幸福永远！我爱您！" 🌷💖
+                </p>
+                <p>陈心恩 out!</p>
+            </p>
+        </div>
+    </div class="pg2">
+        <a href="cover.html"></a>
+    </div>
+<style>
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #7d0a0a;
+}
+.birthdayCard{
+    position: relative;
+    width: 450px;
+    height:650px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s; 
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow:inset 100px 20px 100px rgba(0, 0, 0, 0.2), 0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront{
+    transform: rotateY(-160deg);
+}
+.birthdayCard:hover .happy {
+    visibility: hidden;
+}
+
+.cardFront{
+    position: relative;
+    background-color: rgba(224, 196, 198, 0.561);
+    width: 450px;
+    height: 650px; 
+    overflow: hidden; 
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: 0.6s;
+    border-radius: 8px;
+}
+
+.happy{
+    font-family: "Copperplate";
+    text-align: center;
+    margin: 20px;
+    background-image: linear-gradient(180deg, #f8e4f4 0%, #cda5c4 100%);
+    transition: 0.1s;
+}
+
+.balloons {
+    position: absolute;
+}
+.balloon-1,
+.balloon-2,
+.balloon-3,
+.balloon-4 {
+    position: absolute;
+    width: 180px;
+    height: 210px; 
+    border-radius: 50%;
+}
+
+.balloon-1 {
+    background-color: rgba(200, 107, 200, 0.2);
+    left: -20px;
+    top: 100px;
+}
+
+.balloon-2 {
+    background-color: rgb(229, 161, 161);
+    left: 80px;
+    top: 70px;
+}
+
+.balloon-3 {
+    background-color: rgb(177, 220, 220);
+    left: 180px;
+    top: 120px;
+}
+
+.balloon-4 {
+    background-color: rgba(202, 32, 162, 0.2);
+    left: 300px;
+    top: 140px;
+}
+.balloon-1::before,
+.balloon-2::before,
+.balloon-3::before,
+.balloon-4::before{
+    content:"";
+    position: absolute;
+    width: 2.5px;
+    height: 275px;
+    background-color: #ff56d2;
+    top: 210px;
+    left: 80px; 
+}
+
+.ballooon-1::after,
+.ballooon-2::after,
+.ballooon-3::after,
+.ballooon-4::after {
+    content: "";
+    position: absolute;
+    width: 7px solid transparent;
+    height: 7px solid transparent;
+    top: 70px;
+    left: 87px; 
+}
+
+.balloon-1::after {
+    border-bottom: 10px solid #92d6e9;
+}
+.balloon-2::after {
+    border-bottom: 10px solid #746bc2;
+}
+.balloon-3::after {
+    border-bottom: 10px solid #bddec3;
+}
+.balloon-4::after {
+    border-bottom: 10px solid #d286be;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    height: 650px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.177);
+    border-radius: 8px;
+}
+
+/*this is the page corner part */
+.cardInside::before {
+    content:"";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(221deg, #780909 0%, rgba(114, 31, 31, 0.934) 20%, #fbfbfb 53%);
+    top: 0;
+    right: 0;
+    box-shadow: 4px 4px 4px #0000;
+    border-radius: 0 0 8px 0;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.cardInside:hover::before{
+    height: 95px;
+    width: 95px;
+} /*this is the page corner part */
+
+.img{
+    width: 350px;
+    height: 250px;
+    margin: 40px;
+}
+
+p {
+    font-family: "Typewriter", cursive;
+    margin: 10px;
+    color: #333;
+}
+
+.back{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333; 
+    text-align: center;
+    margin: -10px; 
+    outline-color: #333;
+    outline-style: dotted;
+}
+
+</style>
+</body>
+</html>
